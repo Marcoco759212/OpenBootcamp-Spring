@@ -1,24 +1,32 @@
-## Spring boot
+## Ejercicios sesiones 4, 5 y 6
 
-Proyecto Spring boot con las dependencias / starters:
+### Ejercicio 1
+
+Crear un proyecto Spring Boot con las dependencias:
+
 * H2
 * Spring Data JPA
 * Spring Web
-* Spring boot dev tools
+* Spring Boot dev tools
 
-Aplicacion API REST con acceso a base de datos H2 para persistir la informacion.
+Crear una clase HelloController que sea un controlador REST. Dentro de la clase crear un método que retorne un saludo. Probar que retorna el saludo desde el navegador y desde Postman.
 
-El acceso se puede realizar desde Postman o Navegador.
+### Ejercicio 2
 
-## Entidad Book
+Dentro de la misma app crear las clases necesarias para trabajar con "ordenadores":
 
-1. Book
-2. BookRepository
-3. BookController
-	1. Buscar todos los libros
-	2. Buscar un libro por Id
-	3. Crear un nuevo libro
-	4. Actualizar los datos d eun libro
-	5. Borrar un libro
-	6. Borrar todos los libros
+* Laptop (entidad)
+* LaptopRepository (repositorio)
+* LaptopController (controlador)
 
+Desde LaptopController crear un método que devuelva una lista de objetos Laptop.
+
+Probar que funciona desde Postman.
+
+Los objetos Laptop se pueden insertar desde el método main de la clase principal.
+
+### Ejercicio 3
+
+Crear un método en LaptopController que reciba un objeto Laptop enviado en formato JSON desde Postman y persistirlo en la base de datos.
+
+Comprobar que al obtener de nuevo los laptops aparece el nuevo ordenador creado.
