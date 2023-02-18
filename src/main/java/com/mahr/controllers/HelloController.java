@@ -1,13 +1,19 @@
 package com.mahr.controllers;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
 	
+	// Leyendo variables del archivo .properties
+	@Value("${app.message}")
+	String message;
+	
 	@GetMapping("/hola")
 	public String holaMundo() {
+		System.out.println(message);
 		return "Hola mundoo";
 	}
 	
@@ -29,4 +35,6 @@ public class HelloController {
 					</html>
 				""";
 	}
+	
+
 }
