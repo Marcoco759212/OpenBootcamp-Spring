@@ -4,8 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-import com.mahr.ejercicio2.entities.Laptop;
-import com.mahr.ejercicio2.repositories.LaptopRepository;
+import com.mahr.entities.Laptop;
+import com.mahr.repositories.LaptopRepository;
 
 
 @SpringBootApplication

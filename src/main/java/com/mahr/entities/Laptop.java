@@ -1,4 +1,4 @@
-package com.mahr.ejercicio2.entities;
+package com.mahr.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

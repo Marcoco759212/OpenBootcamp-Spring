@@ -1,32 +1,24 @@
-## Ejercicios sesiones 4, 5 y 6
+## Ejercicios sesiones 7, 8 y 9
 
 ### Ejercicio 1
 
-Crear un proyecto Spring Boot con las dependencias:
+Implementar los métodos CRUD en el API REST de Laptop creada en ejercicios anteriores.
 
-* H2
-* Spring Data JPA
-* Spring Web
-* Spring Boot dev tools
+Los métodos CRUD:
 
-Crear una clase HelloController que sea un controlador REST. Dentro de la clase crear un método que retorne un saludo. Probar que retorna el saludo desde el navegador y desde Postman.
+*findAll()
+*findOneById()
+*create()
+*update()
+*delete()
+*deleteAll()
 
 ### Ejercicio 2
 
-Dentro de la misma app crear las clases necesarias para trabajar con "ordenadores":
+Implementar swagger sobre el API REST de Laptop y verificar que funciona en la URL: http://localhost:8081/swagger-ui/
 
-* Laptop (entidad)
-* LaptopRepository (repositorio)
-* LaptopController (controlador)
-
-Desde LaptopController crear un método que devuelva una lista de objetos Laptop.
-
-Probar que funciona desde Postman.
-
-Los objetos Laptop se pueden insertar desde el método main de la clase principal.
+**NOTA:** El complemento de Swagger se aplicó por medio de la dependedncia de OpenAPI ya que la dependedncia de SpringFox no funcionaba como se había visto en los cursos
 
 ### Ejercicio 3
 
-Crear un método en LaptopController que reciba un objeto Laptop enviado en formato JSON desde Postman y persistirlo en la base de datos.
-
-Comprobar que al obtener de nuevo los laptops aparece el nuevo ordenador creado.
+Crear casos de test para el controlador de Laptop desde Spring Boot. Con click derecho dentro del código de la clase LaptopController utilizar la opción Generate > Test para crear la clase con todos los tests unitarios e implementarlos siguiente el proceso visto en clase.
