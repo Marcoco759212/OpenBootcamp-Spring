@@ -1,46 +1,25 @@
 package com.mahr;
 
-import java.time.LocalDate;
-
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-import com.mahr.entities.Book;
-import com.mahr.repositories.BookRepository;
+import com.mahr.entities.Laptop;
+import com.mahr.repositories.LaptopRepository;
 
 @SpringBootApplication
 public class Main {
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(Main.class, args);
-		BookRepository bookRepo = context.getBean(BookRepository.class);
+		LaptopRepository laptopRepository = context.getBean(LaptopRepository.class);
+
+		Laptop lap = new Laptop(null, "HP", "zbook", "64GB RAM, 3TB SSD, Intel Xeon", 3500.99, true);
 		
-		//CRUD
-		//Crear un libro
-		Book book = new Book(
-						null, "Homo Deus", "Yuval Noah", 450, 
-						29.99, LocalDate.of(2018, 12, 1), true
-					);
-		Book book2 = new Book(
-				null, "Homo Sapiens", "Yuval Noah", 450, 
-				29.99, LocalDate.of(2013, 12, 1), true
-			);
+		Laptop lap2 = new Laptop(null, "DELL", "workstatin", "64GB RAM, 3TB SSD, Intel Xeon", 3500.99, true);
+				
+		laptopRepository.save(lap);
+		laptopRepository.save(lap2);
 		
-		//Almacenar un libro
-		System.out.println("Numero de libros en base de datos: " + bookRepo.findAll().size());
-		
-		bookRepo.save(book);
-		bookRepo.save(book2);
-		/*
-		//Recuperar un libro/
-		System.out.println("Numero de libros en base de datos: " + bookRepo.findAll().size());
-		
-		//Borrarun libro
-		bookRepo.deleteById(1L);
-		
-		System.out.println("Numero de libros en base de datos: " + bookRepo.findAll().size());
-		*/
-		
+
 	}
 }
