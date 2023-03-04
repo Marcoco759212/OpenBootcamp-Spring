@@ -18,6 +18,6 @@ ENV LANG C.UTF-8
 
 ENV JAVA_HOME=/usr/lib/jvm/default-jvm/jre
 
-COPY "./target/OB-Spring-Ejercicios-0.0.1-SNAPSHOT.jar" "OB-SpringBoot.jar"
+COPY "OB-Spring-Ejercicios-0.0.1-SNAPSHOT.jar" "OB-SpringBoot.jar"
 
 ENTRYPOINT ["java","-jar","OB-SpringBoot.jar"]
