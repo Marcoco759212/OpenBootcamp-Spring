@@ -13,7 +13,7 @@ java -jar target/spring-deploy-1.0.jar
 
 Crear un perfil para dev y otro para test con una propiedad nueva que carguemos en el controlador.
 
-#### Evidencias Ejercicio 1
+##### Evidencias Ejercicio 1
 
 ```
 
@@ -92,6 +92,21 @@ la']. This is not recommended -- please use permitAll via HttpSecurity#authorize
 
 Desplegar el API REST de Laptops en Heroku y verificar funcionamiento desde POSTMAN.
 
+Se hizo el despliegue en un sitio llamado Rednder como contenedor de docker ya que actualmente no está desponible el sitio Heroku de forma gratuita
+
+URL para consultar Laptops [https://ob-springboot.onrender.com/api/laptops](https://ob-springboot.onrender.com/api/laptops)
+
+
 ### Ejercicio 3
 
 Añadir Spring Security sobre el proyecto API REST de Laptops y configurar 2 usuarios en memoria utilizando una clase WebSecurityConfig.
+
+**Credenciales para basic auth**
+
+```
+User: user
+Password: user
+
+User: admin
+Password: admin
+```
